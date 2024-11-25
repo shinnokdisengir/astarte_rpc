@@ -24,6 +24,7 @@ defmodule Astarte.RPC.Mixfile do
       app: :astarte_rpc,
       version: "1.2.0-dev",
       elixir: "~> 1.15",
+      compilers: [:yecc, :leex] ++ Mix.compilers(),
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
